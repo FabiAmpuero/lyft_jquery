@@ -18,7 +18,7 @@ function init()
     
     //imgFlag.src=country_url;
     imgFlag.attr("src",country_url);
-    codeFlag.text('+'+country_code);
+    codeFlag.text(country_code);
     
     // ------------------------- CODIGO
     var button = $("#next");
