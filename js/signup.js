@@ -8,16 +8,21 @@ function onFlagClick() {
 
 function init()
 {
-    var imgFlag = document.getElementById("img-flag");
+    var imgFlag = $("#img-flag");
+    var codeFlag = $("#code-flag").text(+51);
     
     var select = localStorage.getItem('country_select'); 
-    var country_url = paises[select].imageURL;
     
-    imgFlag.src=country_url;
+    var country_url = paises[select].imageURL;
+    var country_code = paises[select].phone_code;
+    
+    //imgFlag.src=country_url;
+    imgFlag.attr("src",country_url);
+    codeFlag.text('+'+country_code);
     
     // ------------------------- CODIGO
-    var button = document.getElementById("next");
-    button.addEventListener('click',onButtonClick);
+    var button = $("#next");
+    button.click(onButtonClick);
 }
 
 // --------------------------------------
