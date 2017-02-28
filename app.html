@@ -7,12 +7,77 @@
     <title>App</title>
     <link rel="icon" type="image/ico" href="image/favicon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body onload="init()">
-    <div id="map" style="height:700px;"></div>
+    <!-- ------------------------------------------------------------------ MAPA -->
+    <div id="map"></div>
     
+    <!-- ------------------------------------------------------ LISTA DE CARROS -->
     
+    <ul>
+       <div class="container">
+        <li>
+            <div class="row">
+                <div class="col-xs-3 left">
+                    <img src="image/sedan-image.png" alt="" >
+                </div>
+                <div class="col-xs-7">
+                    <p id="name-car">Line <br><small>Shared, 2 riders max</small></p>
+                </div>
+                <div class="col-xs-2 right">
+                    <p>3 <br>min</p>
+                </div>
+            </div>
+        </li>
+        
+        <li>
+            <div class="row">
+                <div class="col-xs-3 left">
+                    <img src="image/sedan-image.png" alt="" >
+                </div>
+                <div class="col-xs-7">
+                    <p id="name-car">Lyft <br><small>4 seats</small></p>
+                </div>
+                <div class="col-xs-2 right">
+                    <p>3 <br>min</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row">
+                <div class="col-xs-3 left">
+                    <img src="image/sedan-image.png" alt="" >
+                </div>
+                <div class="col-xs-7">
+                    <p id="name-car">Plus <br><small>6 seats</small></p>
+                </div>
+                <div class="col-xs-2 right">
+                    <p>3 <br>min</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row">
+                <div class="col-xs-3 left">
+                    <img src="image/sedan-image.png" alt="" >
+                </div>
+                <div class="col-xs-7">
+                    <p id="name-car">Premier <br><small>High-end, 4 seats</small></p>
+                </div>
+                <div class="col-xs-2 right">
+                    <p>3 <br>min</p>
+                </div>
+            </div>
+        </li>
+        </div>
+    </ul>
+    <!-- ------------------------------------------------------ POSICIÓN ACTUAL -->
+    <!-- --------------------------------------------------- BOTON DE SELECCION -->
+    <a href="" class="btn-set" id="boton">Set pickup</a>
+    
+    <!-- ---------------------------------------------------------------- SCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/app.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OTUCWFO21snB64uTCKgsDmi3UlP5FCo&callback=initMap" async defer></script>
 </body>

@@ -1,5 +1,10 @@
 function init() {
-    
+    var heightWindow = $(window).height();
+    $("#map").css("height",heightWindow);
+    var widthBotton = $(window).width();
+    $("#boton").css("width",widthBotton - 10);
+    $("#boton").css("margin-left","5px");
+    initMap();
 }
 
 
@@ -66,13 +71,16 @@ function initMap() {
     infowindow.open(map, pazPeru);
   });
     
-    marker.addListener('click', toggleBounce);
+    // al hacer click al carro tiene animacion
+    //pero desenfoca lo que esta adelante :(
+    pazPeru.addListener('click', toggleBounce);
+    
+    function toggleBounce() {
+      if (pazPeru.getAnimation() !== null) {
+        pazPeru.setAnimation(null);
+      } else {
+        pazPeru.setAnimation(google.maps.Animation.BOUNCE);
+      }
+    }
 }
 
-function toggleBounce() {
-  if (marker.getAnimation() !== null) {
-    marker.setAnimation(null);
-  } else {
-    marker.setAnimation(google.maps.Animation.BOUNCE);
-  }
-}
