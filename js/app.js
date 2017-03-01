@@ -4,9 +4,24 @@ function init() {
     var widthBotton = $(window).width();
     $("#boton").css("width",widthBotton - 10);
     $("#boton").css("margin-left","5px");
+    $("#div-location").css("width",widthBotton - 10);
+    $("#div-location").css("margin-left","5px");
+    
     initMap();
+    $('#icon-up').click(iconClick);
+    $("#boton").click(setPickup);
 }
 
+function iconClick() {
+    $("#list-cars").toggle();
+}
+
+function setPickup() {
+    $("#div-location").hide();
+    $("#boton").hide();
+    $("#list-cars").hide();
+    
+}
 
 var miMapa;
 function initMap() {

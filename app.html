@@ -14,9 +14,9 @@
     <div id="map"></div>
     
     <!-- ------------------------------------------------------ LISTA DE CARROS -->
-    
-    <ul>
-       <div class="container">
+    <div class="container">
+    <ul id="list-cars">
+       
         <li>
             <div class="row">
                 <div class="col-xs-3 left">
@@ -70,12 +70,18 @@
                 </div>
             </div>
         </li>
-        </div>
+        
     </ul>
+    </div>
     <!-- ------------------------------------------------------ POSICIÓN ACTUAL -->
+    <div class="location" id="div-location">
+        <i class="glyphicon glyphicon-circle-arrow-down col-xs-3" id="icon-up"></i>
+        <p class="col-xs-9">2300 Harrison St <br><small>Pickup location</small></p>
+        
+    </div>
     <!-- --------------------------------------------------- BOTON DE SELECCION -->
-    <a href="" class="btn-set" id="boton">Set pickup</a>
-    
+    <a class="btn-set" id="boton">Set pickup</a>
+    <a class="btn-request" id="boton-request">Request Lyft</a>
     <!-- ---------------------------------------------------------------- SCRIPT -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/app.js"></script>
